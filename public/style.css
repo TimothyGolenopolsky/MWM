@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+.webgl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+nav {
+    color: white;
+    z-index: 2;
+    position: relative;
+    padding: 4rem 8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+}
+
+.title {
+    color: white;
+    z-index: 2;
+    position: absolute;
+    font-size: 3rem;
+    left: 50%; top: 25%;
+    transform: translate(-50%, -25%);
+}
+
+/* Matrix style for Star Information Overlay */
+#starInfo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: #00ff00; /* Green text */
+    background-color: rgba(0, 0, 0, 0.0); /* Semi-transparent black background */
+    padding: 10px;
+    display: none;
+    z-index: 100;
+    max-width: 300px;
+    max-height: 500px;
+    overflow-y: auto;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+    font-size: 14px;
+}
+
+#searchContainer {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: white;
+}
+
+#searchContainer input, #searchContainer button {
+    padding: 10px 55px;
+    margin: 0 4px;
+    border: 1px solid #9614d0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#searchContainer button {
+    cursor: pointer;
+}
+
+#starIdInput::placeholder {
+    color: #ccc;
+}
+
+#gotoContainer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+    color: white;
+}
+
+#gotoContainer input, #gotoContainer button {
+    padding: 8px 12px;
+    margin: 0 4px;
+    border: 1px solid #9614d0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#gotoContainer button {
+    cursor: pointer;
+}
+
+#gotoContainer input::placeholder {
+    color: #ccc;
+}
+
+#settingsButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#settingsMenu {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 2;
+}
+
+#settingsMenu label {
+    display: block;
+    margin: 5px 0;
+}
+
+#settingsMenu input[type=checkbox] {
+    margin-right: 5px;
+}
+
+#settingsMenu input[type=range] {
+    width: 100%;
+}

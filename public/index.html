@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Star Visualization</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas class="webgl"></canvas>
+  <div id="starInfo">
+    <div id="starParams"></div>
+  </div>
+  <div id="searchContainer">
+    <input type="text" id="starIdInput" placeholder="Enter Star ID">
+    <button id="searchButton">Search</button>
+  </div>
+  <div id="gotoContainer">
+    <input type="text" id="inputRA" placeholder="RA">
+    <input type="text" id="inputDEC" placeholder="DEC">
+    <input type="text" id="inputPLX" placeholder="PLX">
+    <button id="gotoButton">Go To</button>
+  </div>
+  <div id="settingsButton">Settings</div>
+  <div id="settingsMenu">
+    <label><input type="checkbox" id="axesCheckbox" checked> Axes On/Off</label>
+    <label><input type="checkbox" id="colorCheckbox" checked> Stars Colors On/Off</label>
+    <label><input type="checkbox" id="radiusCheckbox" checked> Stars Radiuses On/Off</label>
+    <label>Distance Scaling Factor: <input type="range" id="distanceSlider" min="100" max="10000" step="100" value="1000"></label>
+    <label>Dynamic Load Limit: <input type="range" id="loadSlider" min="1000" max="30000" step="1000" value="10000"></label>
+    <label>Luminosity: <input type="range" id="luminositySlider" min="0.1" max="10" step="0.1" value="1"></label>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+</html>
